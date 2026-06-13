@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>PawPa Pastry | Handmade Natural Pet Cakes & Treats · Singapore</title>
+  <meta name="description" content="PawPa Pastry crafts all-natural, additive-free handmade cakes and cookies for dogs and cats in Singapore. Birthday cupcakes, seasonal treats — made with love for your furry kids." />
+  <meta name="keywords" content="pet cake Singapore, dog cake Singapore, cat treat Singapore, natural pet treats, handmade dog birthday cake, additive-free pet food Singapore, PawPa Pastry" />
+  <meta name="author" content="PawPa Pastry" />
+  <link rel="canonical" href="https://www.pawpapastry.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.pawpapastry.com/" />
+  <meta property="og:title" content="PawPa Pastry | Handmade Natural Pet Cakes & Treats" />
+  <meta property="og:description" content="All-natural, additive-free handmade treats & cakes for pets. Because your furry kids deserve the best." />
+  <meta property="og:image" content="https://www.pawpapastry.com/assets/images/logo/logo-full.jpg" />
+  <meta property="og:locale" content="en_SG" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PawPa Pastry | Handmade Natural Pet Cakes & Treats" />
+  <meta name="twitter:description" content="All-natural, additive-free handmade treats & cakes for pets in Singapore." />
+  <meta name="twitter:image" content="https://www.pawpapastry.com/assets/images/logo/logo-full.jpg" />
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "PawPa Pastry",
+    "description": "All-natural, additive-free handmade treats & cakes for pets",
+    "url": "https://www.pawpapastry.com",
+    "image": "https://www.pawpapastry.com/assets/images/logo/logo-full.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "SG"
+    },
+    "sameAs": [
+      "https://www.instagram.com/pawpa_pastry"
+    ],
+    "servesCuisine": "Pet Food",
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --cream:    #FAF7F2;
+      --warm:     #EDE8DF;
+      --latte:    #D4C8B8;
+      --espresso: #3D2B1F;
+      --caramel:  #C8956C;
+      --sage:     #8FAF7E;
+      --white:    #FFFFFF;
+      --radius:   16px;
+      --radius-sm: 8px;
+    }
+
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--espresso);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── TYPOGRAPHY ── */
+    .display {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+    .serif { font-family: 'Playfair Display', serif; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--latte);
+      padding: 0 5%;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+    .nav-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--espresso);
+      letter-spacing: 0.02em;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--espresso);
+      opacity: 0.75;
+      letter-spacing: 0.04em;
+      transition: opacity 0.2s;
+    }
+    .nav-links a:hover { opacity: 1; }
+    .nav-cta {
+      background: var(--espresso);
+      color: var(--cream) !important;
+      opacity: 1 !important;
+      padding: 9px 20px;
+      border-radius: 50px;
+      font-size: 0.875rem !important;
+      font-weight: 500 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--caramel) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      padding-top: 68px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 0;
+    }
+    .hero-text {
+      padding: 80px 5% 80px 8%;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 20px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--caramel);
+      border-radius: 2px;
+    }
+    .hero-heading {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      margin-bottom: 22px;
+    }
+    .hero-heading em {
+      font-style: italic;
+      color: var(--caramel);
+    }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--espresso);
+      opacity: 0.7;
+      max-width: 420px;
+      line-height: 1.75;
+      margin-bottom: 36px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--warm);
+      border: 1px solid var(--latte);
+      color: var(--espresso);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 7px 14px;
+      border-radius: 50px;
+    }
+    .badge-icon { font-size: 0.95rem; }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--espresso);
+      color: var(--cream);
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background 0.25s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--caramel); transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--espresso);
+      padding: 14px 28px;
+      border-radius: 50px;
+      border: 1.5px solid var(--latte);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: border-color 0.25s, transform 0.15s;
+    }
+    .btn-secondary:hover { border-color: var(--caramel); transform: translateY(-1px); }
+    .hero-visual {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+      background: var(--warm);
+    }
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-visual-overlay {
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      background: rgba(250,247,242,0.92);
+      backdrop-filter: blur(8px);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid var(--latte);
+    }
+    .hero-ig-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--caramel);
+    }
+    .hero-ig-text { font-size: 0.8rem; line-height: 1.4; }
+    .hero-ig-text strong { display: block; font-weight: 600; }
+    .hero-ig-text span { opacity: 0.6; font-size: 0.75rem; }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 96px 8%; }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 14px;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 20px; height: 2px;
+      background: var(--caramel);
+      border-radius: 2px;
+    }
+    .section-heading {
+      font-size: clamp(1.9rem, 3vw, 2.7rem);
+      margin-bottom: 14px;
+    }
+    .section-sub {
+      font-size: 1rem;
+      opacity: 0.65;
+      max-width: 520px;
+      line-height: 1.75;
+      margin-bottom: 56px;
+    }
+
+    /* ── ABOUT STRIP ── */
+    #about {
+      background: var(--espresso);
+      color: var(--cream);
+      padding: 72px 8%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    #about .section-label { color: var(--caramel); }
+    #about .section-label::before { background: var(--caramel); }
+    #about .section-heading { color: var(--cream); margin-bottom: 20px; }
+    #about p {
+      opacity: 0.75;
+      line-height: 1.85;
+      margin-bottom: 16px;
+      font-size: 0.975rem;
+    }
+    .about-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-value {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-sm);
+      padding: 18px 16px;
+    }
+    .about-value-icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .about-value-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+    .about-value-desc { font-size: 0.8rem; opacity: 0.6; line-height: 1.5; }
+
+    /* ── PRODUCTS ── */
+    #products { background: var(--cream); }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .product-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--latte);
+      transition: box-shadow 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      box-shadow: 0 20px 48px rgba(61,43,31,0.12);
+      transform: translateY(-4px);
+    }
+    .product-image-wrap {
+      position: relative;
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: var(--warm);
+    }
+    .product-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+    .product-card:hover .product-image-wrap img {
+      transform: scale(1.06);
+    }
+    .product-thumb-strip {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+    }
+    .thumb-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: background 0.2s, width 0.2s;
+    }
+    .thumb-dot.active {
+      background: var(--white);
+      width: 18px;
+      border-radius: 3px;
+    }
+    .product-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--caramel);
+      color: var(--white);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 50px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .product-body {
+      padding: 22px 22px 26px;
+    }
+    .product-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .product-desc {
+      font-size: 0.855rem;
+      opacity: 0.65;
+      line-height: 1.65;
+      margin-bottom: 14px;
+    }
+    .product-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .product-pill {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: var(--warm);
+      color: var(--espresso);
+      opacity: 0.85;
+    }
+    .product-pill.green {
+      background: #EAF0E6;
+      color: #4A7A3A;
+    }
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .product-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.9rem;
+      font-style: italic;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+    .product-price span {
+      display: block;
+      font-style: normal;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.76rem;
+      opacity: 0.65;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .btn-order {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--espresso);
+      color: var(--cream);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .btn-order:hover { background: var(--caramel); }
+    .btn-order svg { width: 14px; height: 14px; fill: currentColor; }
+
+    /* ── INGREDIENTS NEW ── */
+    .ingr-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .ingr-block {
+      background: var(--white);
+      border: 1px solid var(--latte);
+      border-radius: var(--radius);
+      padding: 30px 28px 24px;
+    }
+    .ingr-block-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--warm);
+    }
+    .ingr-icon { font-size: 2rem; }
+    .ingr-block-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+    .ingr-block-sub { font-size: 0.78rem; opacity: 0.5; margin-top: 2px; }
+    .ingr-list {
+      list-style: none;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+    .ingr-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+    .ingr-dot {
+      display: inline-block;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--caramel);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+    .ingr-addon {
+      background: var(--warm);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 18px;
+    }
+    .ingr-addon-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--caramel);
+      margin-bottom: 4px;
+      letter-spacing: 0.04em;
+    }
+    .ingr-addon-text { font-size: 0.82rem; opacity: 0.65; }
+    .ingr-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .ingr-badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 50px;
+      background: #EAF0E6;
+      color: #4A7A3A;
+    }
+    @media (max-width: 640px) {
+      .ingr-two-col { grid-template-columns: 1fr; }
+    }
+
+    .paw-divider {
+      text-align: center;
+      padding: 32px 0;
+      color: var(--latte);
+      font-size: 1.5rem;
+      letter-spacing: 12px;
+    }
+
+    /* ── INGREDIENTS STRIP ── */
+    #ingredients {
+      background: var(--warm);
+      padding: 72px 8%;
+      text-align: center;
+    }
+    #ingredients .section-heading { margin-bottom: 48px; }
+    .ingredients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .ingredient-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 20px;
+      border: 1px solid var(--latte);
+    }
+    .ingredient-icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .ingredient-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .ingredient-note { font-size: 0.8rem; opacity: 0.6; line-height: 1.5; }
+
+    /* ── IG SECTION ── */
+    #instagram {
+      background: var(--cream);
+      text-align: center;
+    }
+    .ig-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--caramel);
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 48px;
+      transition: opacity 0.2s;
+    }
+    .ig-link:hover { opacity: 0.75; }
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .ig-tile {
+      aspect-ratio: 1;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--warm);
+    }
+    .ig-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .ig-tile:hover img { transform: scale(1.08); }
+
+    /* ── CONTACT / ORDER ── */
+    #order {
+      background: var(--espresso);
+      color: var(--cream);
+      text-align: center;
+      padding: 96px 8%;
+    }
+    #order .section-label { color: var(--caramel); justify-content: center; }
+    #order .section-label::before { background: var(--caramel); }
+    #order .section-heading { color: var(--cream); max-width: 600px; margin: 0 auto 16px; }
+    #order .section-sub { opacity: 0.6; max-width: 480px; margin: 0 auto 40px; }
+    .order-steps {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .order-step {
+      text-align: center;
+      max-width: 160px;
+    }
+    .order-step-num {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(200,149,108,0.25);
+      border: 1.5px solid var(--caramel);
+      color: var(--caramel);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
+    .order-step-text { font-size: 0.85rem; opacity: 0.7; line-height: 1.55; }
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: var(--white);
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.25s, transform 0.15s;
+    }
+    .btn-whatsapp:hover { background: #1ebe5d; transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #2A1E17;
+      color: var(--cream);
+      padding: 48px 8% 32px;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer-brand img {
+      width: 52px;
+      margin-bottom: 14px;
+    }
+    .footer-brand p {
+      font-size: 0.85rem;
+      opacity: 0.55;
+      line-height: 1.7;
+      max-width: 260px;
+    }
+    .footer-col h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a {
+      font-size: 0.85rem;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+    .footer-col a:hover { opacity: 1; }
+    .footer-bottom {
+      background: #2A1E17;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      padding: 20px 8%;
+      font-size: 0.78rem;
+      opacity: 0.4;
+    }
+
+    /* ── MOBILE MENU ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--espresso);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* ── REVIEWS CAROUSEL ── */
+    .reviews-outer {
+      overflow: hidden;
+      width: 100%;
+      cursor: grab;
+      user-select: none;
+    }
+    .reviews-outer:active { cursor: grabbing; }
+    .reviews-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      padding: 8px 0 16px;
+      will-change: transform;
+    }
+    .review-slide {
+      flex: 0 0 300px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(61,43,31,0.10);
+      background: var(--white);
+      border: 1px solid var(--latte);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .review-slide:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(61,43,31,0.14);
+    }
+    .review-slide img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+    .reviews-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .rdot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: none;
+      background: var(--latte);
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s, width 0.2s;
+    }
+    .rdot.active {
+      background: var(--caramel);
+      width: 24px;
+      border-radius: 4px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      #hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .hero-text { padding: 60px 6% 40px; }
+      .hero-visual { height: 50vw; min-height: 280px; }
+      #about {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+      .ingredients-grid { grid-template-columns: repeat(2, 1fr); }
+      .ig-grid { grid-template-columns: repeat(2, 1fr); }
+      footer { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+    @media (max-width: 580px) {
+      section { padding: 64px 5%; }
+      .products-grid { grid-template-columns: 1fr; }
+      .ingredients-grid { grid-template-columns: repeat(2, 1fr); }
+      footer { grid-template-columns: 1fr; gap: 32px; }
+      .order-steps { gap: 28px; }
+    }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <img src="assets/images/logo/logo.png" alt="PawPa Pastry logo" />
+      <span class="nav-logo-text">PawPa Pastry</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#products">Menu</a></li>
+      <li><a href="#ingredients">Ingredients</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="https://www.instagram.com/pawpa_pastry" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="#order" class="nav-cta">Order Now</a></li>
+    </ul>
+    <div class="nav-hamburger" onclick="toggleMenu(this)">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Handmade in Singapore</div>
+      <h1 class="display hero-heading">
+        Baked with <em>care</em>.<br/>Loved by paws.
+      </h1>
+      <p class="hero-sub">
+        Because your furry kids deserve nothing but the best — every bite at PawPa Pastry is crafted from all-natural, additive-free ingredients.
+      </p>
+      <div class="hero-badges">
+        <span class="badge"><span class="badge-icon">🌿</span> All-Natural</span>
+        <span class="badge"><span class="badge-icon">🐾</span> Dog & Cat Safe</span>
+        <span class="badge"><span class="badge-icon">✋</span> Handmade</span>
+        <span class="badge"><span class="badge-icon">🚫</span> No Additives</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#products" class="btn-primary">Browse Menu 🐾</a>
+        <a href="#order" class="btn-secondary">How to Order</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="assets/images/hero-cupcakes.jpg"
+           alt="PawPa Pastry handmade pet cupcakes in a gift box"
+           loading="eager" />
+      <a href="https://www.instagram.com/pawpa_pastry" target="_blank" rel="noopener" class="hero-visual-overlay" style="text-decoration:none;">
+        <span style="font-size:1.1rem;">📸</span>
+        <div class="hero-ig-text">
+          <strong>@pawpa_pastry</strong>
+          <span>Follow us on Instagram</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <div id="about">
+    <div>
+      <div class="section-label">Our Story</div>
+      <h2 class="display section-heading" style="color:var(--cream)">
+        Your pets are<br/>family too.
+      </h2>
+      <p>Our fur babies are family — and we only want the best for them. We have a dog of our own, but she's never been much of a treat lover. That made us think: if we're going to give her something, it had better be genuinely wholesome — no additives, nothing unnecessary, nothing we wouldn't feel good about.</p>
+      <p>So we started researching, taking classes, and developing recipes. After a lot of testing (and a lot of taste-testing from our very discerning dog), PawPa Pastry was born.</p>
+      <p>The name PawPa comes from our dog, <strong>Pasta</strong>. We use only all-natural, additive-free ingredients, and every treat and cake is made fresh to order — because freshness is something you can't fake. Let's live happily with our dogs. 🐾</p>
+    </div>
+    <div class="reveal">
+      <div style="border-radius:var(--radius);overflow:hidden;margin-bottom:20px;max-height:320px;">
+        <img src="assets/images/pasta.jpg" alt="Pasta — the dog behind PawPa Pastry" style="width:100%;display:block;" />
+        <div style="background:rgba(61,43,31,0.85);padding:10px 16px;text-align:center;">
+          <span style="color:#FAF7F2;font-family:'Playfair Display',serif;font-size:0.95rem;font-style:italic;">Meet Pasta — the inspiration behind PawPa Pastry 🐾</span>
+        </div>
+      </div>
+      <div class="about-values">
+      <div class="about-value">
+        <div class="about-value-icon">🌿</div>
+        <div class="about-value-title">100% Natural</div>
+        <div class="about-value-desc">No artificial colors, flavors or preservatives. Ever.</div>
+      </div>
+      <div class="about-value">
+        <div class="about-value-icon">✋</div>
+        <div class="about-value-title">Small Batch</div>
+        <div class="about-value-desc">Made to order so every treat is fresh.</div>
+      </div>
+      <div class="about-value">
+        <div class="about-value-icon">🐶🐱</div>
+        <div class="about-value-title">Dog & Cat Safe</div>
+        <div class="about-value-desc">Human-grade ingredients — safe and wholesome for dogs &amp; cats.</div>
+      </div>
+      <div class="about-value">
+        <div class="about-value-icon">💌</div>
+        <div class="about-value-title">Made with Love</div>
+        <div class="about-value-desc">Every order baked with intention and care.</div>
+      </div>
+      </div><!-- /about-values -->
+    </div><!-- /reveal wrapper -->
+  </div><!-- /about -->
+  <section id="products">
+    <div class="section-label">Our Menu</div>
+    <h2 class="display section-heading">Handcrafted treats<br/>for every occasion</h2>
+    <p class="section-sub">From birthday celebrations to everyday snacking — all made fresh to order with ingredients you can trust.</p>
+
+    <div class="products-grid">
+
+      <!-- Product 1: Birthday Cupcakes -->
+      <div class="product-card reveal" data-imgs='["assets/images/products/birthday-cupcakes/1.jpg","assets/images/products/birthday-cupcakes/2.jpg","assets/images/products/birthday-cupcakes/3.jpg"]'>
+        <div class="product-image-wrap">
+          <span class="product-tag">🎂 Bestseller</span>
+          <img src="assets/images/products/birthday-cupcakes/1.jpg" alt="Birthday Cupcakes for pets" loading="lazy" />
+          <div class="product-thumb-strip">
+            <div class="thumb-dot active"></div>
+            <div class="thumb-dot"></div>
+            <div class="thumb-dot"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Birthday Cupcakes</h3>
+          <p class="product-desc">Fluffy cloud cupcakes to celebrate your paw's birthday. Chicken base with potato decoration. Add-on fondant name available.</p>
+          <div class="product-meta">
+            <span class="product-pill">4 pcs / 2 pcs</span>
+            <span class="product-pill green">🐶🐱 Dog & Cat</span>
+            <span class="product-pill green">No Additives</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">From S$19.90<span>2 pcs · S$19.90</span><span>4 pcs · S$38.00</span><span>Fondant add-on +S$2/pc</span></div>
+            <a href="https://wa.me/6584232193?text=Hi%20PawPa%20Pastry!%20I'm%20interested%20in%20the%20Birthday%20Cupcakes%20🎂" target="_blank" rel="noopener" class="btn-order">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.05A9.95 9.95 0 0 0 2.1 12c0 1.75.458 3.394 1.257 4.82L2 22l5.35-1.397A9.917 9.917 0 0 0 12.05 22c5.514 0 9.95-4.436 9.95-9.95S17.564 2.05 12.05 2.05zm0 18.15a8.2 8.2 0 0 1-4.187-1.145l-.3-.178-3.175.831.848-3.095-.196-.317A8.196 8.196 0 0 1 3.85 12.05c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.15-8.2 8.15z"/></svg>
+              Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2: Christmas Cupcakes -->
+      <div class="product-card reveal reveal-delay-1" data-imgs='["assets/images/products/christmas-cupcakes/1.jpg","assets/images/products/christmas-cupcakes/2.jpg","assets/images/products/christmas-cupcakes/3.jpg","assets/images/products/christmas-cupcakes/4.jpg","assets/images/products/christmas-cupcakes/5.jpg"]'>
+        <div class="product-image-wrap">
+          <span class="product-tag">🎄 Limited</span>
+          <img src="assets/images/products/christmas-cupcakes/1.jpg" alt="Christmas Edition Pet Cupcakes" loading="lazy" />
+          <div class="product-thumb-strip">
+            <div class="thumb-dot active"></div>
+            <div class="thumb-dot"></div>
+            <div class="thumb-dot"></div>
+            <div class="thumb-dot"></div>
+            <div class="thumb-dot"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Christmas Edition Cupcakes</h3>
+          <p class="product-desc">Fluffy cloud cupcakes with festive Christmas deco. Celebrate the season with your paw friend. Add-on fondant name available.</p>
+          <div class="product-meta">
+            <span class="product-pill">4 pcs / 2 pcs</span>
+            <span class="product-pill green">🐶🐱 Dog & Cat</span>
+            <span class="product-pill green">Limited Edition</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">From S$19.90<span>2 pcs · S$19.90</span><span>4 pcs · S$38.00</span><span>Fondant add-on +S$2/pc</span></div>
+            <a href="https://wa.me/6584232193?text=Hi%20PawPa%20Pastry!%20I'm%20interested%20in%20the%20Christmas%20Edition%20Cupcakes%20🎄" target="_blank" rel="noopener" class="btn-order">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.05A9.95 9.95 0 0 0 2.1 12c0 1.75.458 3.394 1.257 4.82L2 22l5.35-1.397A9.917 9.917 0 0 0 12.05 22c5.514 0 9.95-4.436 9.95-9.95S17.564 2.05 12.05 2.05zm0 18.15a8.2 8.2 0 0 1-4.187-1.145l-.3-.178-3.175.831.848-3.095-.196-.317A8.196 8.196 0 0 1 3.85 12.05c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.15-8.2 8.15z"/></svg>
+              Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3: Cookies Paws and Boons -->
+      <div class="product-card reveal reveal-delay-2" data-imgs='["assets/images/products/cookies-paws/1.jpg","assets/images/products/cookies-paws/2.jpg","assets/images/products/cookies-paws/3.jpg"]'>
+        <div class="product-image-wrap">
+          <img src="assets/images/products/cookies-paws/1.jpg" alt="Chicken Cookies Paws and Boons" loading="lazy" />
+          <div class="product-thumb-strip">
+            <div class="thumb-dot active"></div>
+            <div class="thumb-dot"></div>
+            <div class="thumb-dot"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Chicken Cookies — Paws & Boons</h3>
+          <p class="product-desc">Adorable and tasty cookies freshly baked with 100% fresh chicken. Available in Sweet Potato or Carrot flavour.</p>
+          <div class="product-meta">
+            <span class="product-pill">40g / 80g</span>
+            <span class="product-pill green">🐶🐱 Dog & Cat</span>
+            <span class="product-pill green">No Additives</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">From S$14.90<span>40g · S$14.90 &nbsp;|&nbsp; 80g · S$28.90</span></div>
+            <a href="https://wa.me/6584232193?text=Hi%20PawPa%20Pastry!%20I'm%20interested%20in%20the%20Chicken%20Cookies%20Paws%20%26%20Boons%20🐾" target="_blank" rel="noopener" class="btn-order">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.05A9.95 9.95 0 0 0 2.1 12c0 1.75.458 3.394 1.257 4.82L2 22l5.35-1.397A9.917 9.917 0 0 0 12.05 22c5.514 0 9.95-4.436 9.95-9.95S17.564 2.05 12.05 2.05zm0 18.15a8.2 8.2 0 0 1-4.187-1.145l-.3-.178-3.175.831.848-3.095-.196-.317A8.196 8.196 0 0 1 3.85 12.05c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.15-8.2 8.15z"/></svg>
+              Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4: Cookies Christmas -->
+      <div class="product-card reveal reveal-delay-3" data-imgs='["assets/images/products/cookies-christmas/1.jpg","assets/images/products/cookies-christmas/2.jpg","assets/images/products/cookies-christmas/3.jpg"]'>
+        <div class="product-image-wrap">
+          <span class="product-tag">🎄 Limited</span>
+          <img src="assets/images/products/cookies-christmas/1.jpg" alt="Chicken Cookies Christmas Edition" loading="lazy" />
+          <div class="product-thumb-strip">
+            <div class="thumb-dot active"></div>
+            <div class="thumb-dot"></div>
+            <div class="thumb-dot"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Chicken Cookies — Christmas</h3>
+          <p class="product-desc">Festive-shaped chicken cookies to celebrate Christmas with your furry friend. Sweet Potato or Carrot flavour.</p>
+          <div class="product-meta">
+            <span class="product-pill">40g / 80g</span>
+            <span class="product-pill green">🐶🐱 Dog & Cat</span>
+            <span class="product-pill green">Limited Edition</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">From S$16.00<span>40g · S$16.00 &nbsp;|&nbsp; 80g · S$30.90</span></div>
+            <a href="https://wa.me/6584232193?text=Hi%20PawPa%20Pastry!%20I'm%20interested%20in%20the%20Christmas%20Chicken%20Cookies%20🎄" target="_blank" rel="noopener" class="btn-order">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.05A9.95 9.95 0 0 0 2.1 12c0 1.75.458 3.394 1.257 4.82L2 22l5.35-1.397A9.917 9.917 0 0 0 12.05 22c5.514 0 9.95-4.436 9.95-9.95S17.564 2.05 12.05 2.05zm0 18.15a8.2 8.2 0 0 1-4.187-1.145l-.3-.178-3.175.831.848-3.095-.196-.317A8.196 8.196 0 0 1 3.85 12.05c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.15-8.2 8.15z"/></svg>
+              Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5: Cookies Dinosaur -->
+      <div class="product-card reveal reveal-delay-4" data-imgs='["assets/images/products/cookies-dinosaur/1.jpg","assets/images/products/cookies-dinosaur/2.jpg","assets/images/products/cookies-dinosaur/3.jpg"]'>
+        <div class="product-image-wrap">
+          <img src="assets/images/products/cookies-dinosaur/1.jpg" alt="Chicken Cookies Dinosaur" loading="lazy" />
+          <div class="product-thumb-strip">
+            <div class="thumb-dot active"></div>
+            <div class="thumb-dot"></div>
+            <div class="thumb-dot"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Chicken Cookies — Dinosaur</h3>
+          <p class="product-desc">Dino-shaped chicken cookies your pet will go roar for! Freshly baked with 100% fresh chicken. Sweet Potato or Carrot flavour.</p>
+          <div class="product-meta">
+            <span class="product-pill">40g / 80g</span>
+            <span class="product-pill green">🐶🐱 Dog & Cat</span>
+            <span class="product-pill green">No Additives</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">From S$14.90<span>40g · S$14.90 &nbsp;|&nbsp; 80g · S$28.90</span></div>
+            <a href="https://wa.me/6584232193?text=Hi%20PawPa%20Pastry!%20I'm%20interested%20in%20the%20Dinosaur%20Chicken%20Cookies%20🦕" target="_blank" rel="noopener" class="btn-order">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.05A9.95 9.95 0 0 0 2.1 12c0 1.75.458 3.394 1.257 4.82L2 22l5.35-1.397A9.917 9.917 0 0 0 12.05 22c5.514 0 9.95-4.436 9.95-9.95S17.564 2.05 12.05 2.05zm0 18.15a8.2 8.2 0 0 1-4.187-1.145l-.3-.178-3.175.831.848-3.095-.196-.317A8.196 8.196 0 0 1 3.85 12.05c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.15-8.2 8.15z"/></svg>
+              Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6: Cookies Winnie the Pooh -->
+      <div class="product-card reveal reveal-delay-5" data-imgs='["assets/images/products/cookies-winnie/1.jpg","assets/images/products/cookies-winnie/2.jpg","assets/images/products/cookies-winnie/3.jpg"]'>
+        <div class="product-image-wrap">
+          <img src="assets/images/products/cookies-winnie/1.jpg" alt="Chicken Cookies Winnie the Pooh" loading="lazy" />
+          <div class="product-thumb-strip">
+            <div class="thumb-dot active"></div>
+            <div class="thumb-dot"></div>
+            <div class="thumb-dot"></div>
+          </div>
+        </div>
+        <div class="product-body">
+          <h3 class="product-name">Chicken Cookies — Winnie the Pooh</h3>
+          <p class="product-desc">Loveable bear-shaped cookies baked fresh with 100% chicken. A treat as sweet as Pooh himself. Sweet Potato or Carrot flavour.</p>
+          <div class="product-meta">
+            <span class="product-pill">40g / 80g</span>
+            <span class="product-pill green">🐶🐱 Dog & Cat</span>
+            <span class="product-pill green">No Additives</span>
+          </div>
+          <div class="product-footer">
+            <div class="product-price">From S$14.90<span>40g · S$14.90 &nbsp;|&nbsp; 80g · S$28.90</span></div>
+            <a href="https://wa.me/6584232193?text=Hi%20PawPa%20Pastry!%20I'm%20interested%20in%20the%20Winnie%20the%20Pooh%20Chicken%20Cookies%20🍯" target="_blank" rel="noopener" class="btn-order">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.05A9.95 9.95 0 0 0 2.1 12c0 1.75.458 3.394 1.257 4.82L2 22l5.35-1.397A9.917 9.917 0 0 0 12.05 22c5.514 0 9.95-4.436 9.95-9.95S17.564 2.05 12.05 2.05zm0 18.15a8.2 8.2 0 0 1-4.187-1.145l-.3-.178-3.175.831.848-3.095-.196-.317A8.196 8.196 0 0 1 3.85 12.05c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.15-8.2 8.15z"/></svg>
+              Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /products-grid -->
+  </section>
+
+  <!-- ── INGREDIENTS ── -->
+  <div id="ingredients">
+    <div class="section-label" style="justify-content:center">What's Inside</div>
+    <h2 class="display section-heading">Only the good stuff.</h2>
+    <p style="opacity:0.6;font-size:0.95rem;margin-bottom:48px;">Human-grade ingredients — no additives, no preservatives, nothing artificial. Ever.</p>
+
+    <div class="ingr-two-col">
+
+      <!-- COOKIES -->
+      <div class="ingr-block reveal">
+        <div class="ingr-block-header">
+          <span class="ingr-icon">🍪</span>
+          <div>
+            <div class="ingr-block-title">Cookies</div>
+            <div class="ingr-block-sub">Chicken Cookies range</div>
+          </div>
+        </div>
+        <ul class="ingr-list">
+          <li><span class="ingr-dot"></span><strong>Chicken</strong> — 100% fresh, high-quality protein</li>
+          <li><span class="ingr-dot"></span><strong>Egg</strong> — natural binding agent</li>
+          <li><span class="ingr-dot"></span><strong>Sweet Potato</strong> or <strong>Carrot</strong> — natural flavour &amp; colour</li>
+        </ul>
+        <div class="ingr-badge-row">
+          <span class="ingr-badge">🌿 No Additives</span>
+          <span class="ingr-badge">✋ Handmade</span>
+          <span class="ingr-badge">🐾 Dog &amp; Cat Safe</span>
+        </div>
+      </div>
+
+      <!-- CAKES -->
+      <div class="ingr-block reveal reveal-delay-2">
+        <div class="ingr-block-header">
+          <span class="ingr-icon">🎂</span>
+          <div>
+            <div class="ingr-block-title">Cakes &amp; Cupcakes</div>
+            <div class="ingr-block-sub">Birthday &amp; seasonal editions</div>
+          </div>
+        </div>
+        <ul class="ingr-list">
+          <li><span class="ingr-dot"></span><strong>Chicken or Fish</strong> — wholesome base</li>
+          <li><span class="ingr-dot"></span><strong>Potato</strong> — light &amp; digestible decoration</li>
+          <li><span class="ingr-dot"></span><strong>Natural fruit &amp; veg powder</strong> — colour from real food</li>
+        </ul>
+        <div class="ingr-addon">
+          <div class="ingr-addon-label">✨ Add-on Fondant</div>
+          <div class="ingr-addon-text">Goat milk · Natural fruit &amp; veg powder</div>
+        </div>
+        <div class="ingr-badge-row">
+          <span class="ingr-badge">🌿 No Additives</span>
+          <span class="ingr-badge">✋ Handmade</span>
+          <span class="ingr-badge">🐾 Dog &amp; Cat Safe</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── REVIEWS ── -->
+  <section id="reviews" style="background:var(--warm);overflow:hidden;">
+    <div class="section-label" style="justify-content:center">Happy Paws</div>
+    <h2 class="display section-heading" style="text-align:center">What our fur families say</h2>
+    <p style="text-align:center;opacity:0.6;font-size:0.95rem;margin-bottom:48px;max-width:480px;margin-left:auto;margin-right:auto;">Real moments shared by real pet parents on Instagram 🐾</p>
+
+    <!-- Carousel track -->
+    <div class="reviews-outer">
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="review-slide"><img src="assets/images/reviews/review_1.jpg" alt="@crystalminipoodle — must try" loading="lazy" /></div>
+        <div class="review-slide"><img src="assets/images/reviews/review_2.jpg" alt="@minidoxlola — customised pup cakes" loading="lazy" /></div>
+        <div class="review-slide"><img src="assets/images/reviews/review_3.jpg" alt="@scottie.chiang — xmas pressies from my favourite aunties" loading="lazy" /></div>
+        <div class="review-slide"><img src="assets/images/reviews/review_4.jpg" alt="@minidoxlola — dinner sponsored by pawpa_pastry" loading="lazy" /></div>
+        <div class="review-slide"><img src="assets/images/reviews/review_5.jpg" alt="Lovely Oreo chasing the dinosaur cookies" loading="lazy" /></div>
+        <div class="review-slide"><img src="assets/images/reviews/review_6.jpg" alt="@mochi_thecorgisg — too pretty to eat" loading="lazy" /></div>
+        <div class="review-slide"><img src="assets/images/reviews/review_7.jpg" alt="Dog waiting excitedly for PawPa Pastry cookies" loading="lazy" /></div>
+      </div>
+    </div>
+
+    <!-- Dots nav -->
+    <div class="reviews-dots" id="reviewsDots">
+      <button class="rdot active" onclick="goReview(0)"></button>
+      <button class="rdot" onclick="goReview(1)"></button>
+      <button class="rdot" onclick="goReview(2)"></button>
+      <button class="rdot" onclick="goReview(3)"></button>
+      <button class="rdot" onclick="goReview(4)"></button>
+      <button class="rdot" onclick="goReview(5)"></button>
+      <button class="rdot" onclick="goReview(6)"></button>
+    </div>
+
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://www.instagram.com/pawpa_pastry" target="_blank" rel="noopener" class="btn-secondary" style="display:inline-flex;">
+        See more on @pawpa_pastry
+      </a>
+    </div>
+  </section>
+
+  <!-- ── INSTAGRAM ── -->
+  <section id="instagram">
+    <div class="section-label" style="justify-content:center">Follow Along</div>
+    <h2 class="display section-heading">Made with love,<br/>shared with joy.</h2>
+    <a href="https://www.instagram.com/pawpa_pastry" target="_blank" rel="noopener" class="ig-link">
+      📸 @pawpa_pastry
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <div class="ig-grid">
+      <div class="ig-tile reveal"><img src="assets/images/products/birthday-cupcakes/2.jpg" alt="PawPa Pastry on Instagram" loading="lazy" /></div>
+      <div class="ig-tile reveal reveal-delay-1"><img src="assets/images/products/cookies-winnie/2.jpg" alt="PawPa Pastry on Instagram" loading="lazy" /></div>
+      <div class="ig-tile reveal reveal-delay-2"><img src="assets/images/products/cookies-paws/3.jpg" alt="PawPa Pastry on Instagram" loading="lazy" /></div>
+      <div class="ig-tile reveal reveal-delay-3"><img src="assets/images/products/christmas-cupcakes/1.jpg" alt="PawPa Pastry on Instagram" loading="lazy" /></div>
+    </div>
+    <a href="https://www.instagram.com/pawpa_pastry" target="_blank" rel="noopener" class="btn-secondary" style="margin:0 auto; display:inline-flex;">
+      See more on Instagram
+    </a>
+  </section>
+
+  <!-- ── ORDER ── -->
+  <div id="order">
+    <div class="section-label">How to Order</div>
+    <h2 class="display section-heading">Ready to treat your fur baby?</h2>
+    <p class="section-sub">Ordering is simple! Just drop us a WhatsApp message and we'll take care of the rest.</p>
+    <div class="order-steps">
+      <div class="order-step">
+        <div class="order-step-num">1</div>
+        <div class="order-step-text">Browse our menu and pick your favourite treat</div>
+      </div>
+      <div class="order-step">
+        <div class="order-step-num">2</div>
+        <div class="order-step-text">Tap "Order" or message us on WhatsApp</div>
+      </div>
+      <div class="order-step">
+        <div class="order-step-num">3</div>
+        <div class="order-step-text">We'll confirm details, price &amp; delivery date</div>
+      </div>
+    </div>
+    <a href="https://wa.me/6584232193?text=Hi%20PawPa%20Pastry!%20I'd%20like%20to%20place%20an%20order%20🐾" target="_blank" rel="noopener" class="btn-whatsapp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.05 2.05A9.95 9.95 0 0 0 2.1 12c0 1.75.458 3.394 1.257 4.82L2 22l5.35-1.397A9.917 9.917 0 0 0 12.05 22c5.514 0 9.95-4.436 9.95-9.95S17.564 2.05 12.05 2.05zm0 18.15a8.2 8.2 0 0 1-4.187-1.145l-.3-.178-3.175.831.848-3.095-.196-.317A8.196 8.196 0 0 1 3.85 12.05c0-4.52 3.68-8.2 8.2-8.2s8.2 3.68 8.2 8.2-3.68 8.15-8.2 8.15z"/></svg>
+      Chat on WhatsApp
+    </a>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-brand">
+      <img src="assets/images/logo/logo.png" alt="PawPa Pastry" />
+      <p>All-natural, additive-free handmade treats &amp; cakes for pets. Because your furry kids deserve only the best.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#products">Birthday Cupcakes</a></li>
+        <li><a href="#products">Christmas Cupcakes</a></li>
+        <li><a href="#products">Chicken Cookies</a></li>
+        <li><a href="#order">Custom Orders</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/pawpa_pastry" target="_blank" rel="noopener">Instagram @pawpa_pastry</a></li>
+        <li><a href="https://wa.me/6584232193" target="_blank" rel="noopener">WhatsApp Us</a></li>
+        <li><a href="#about">Our Story</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    © 2025 PawPa Pastry · Handmade in Singapore 🐾
+    <!-- Future: Privacy Policy · Terms -->
+  </div>
+
+  <script>
+    // ── SCROLL REVEAL ──
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+
+    // ── PRODUCT IMAGE CAROUSEL ──
+    document.querySelectorAll('.product-card').forEach(card => {
+      const imgEl = card.querySelector('.product-image-wrap img');
+      const dots = card.querySelectorAll('.thumb-dot');
+      const imgs = JSON.parse(card.dataset.imgs || '[]');
+      if (!imgs.length || !imgEl) return;
+
+      let current = 0;
+
+      function goTo(idx) {
+        current = idx;
+        imgEl.src = imgs[idx];
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      }
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', (e) => { e.stopPropagation(); goTo(i); });
+      });
+
+      // Auto-cycle on hover
+      let interval;
+      card.addEventListener('mouseenter', () => {
+        interval = setInterval(() => goTo((current + 1) % imgs.length), 1400);
+      });
+      card.addEventListener('mouseleave', () => {
+        clearInterval(interval);
+        goTo(0);
+      });
+    });
+
+    // ── MOBILE MENU ──
+    function toggleMenu(btn) {
+      const nav = btn.closest('nav');
+      let menu = nav.querySelector('.mobile-menu');
+      if (!menu) {
+        menu = document.createElement('div');
+        menu.className = 'mobile-menu';
+        menu.style.cssText = `
+          position:fixed; top:68px; left:0; right:0;
+          background:var(--cream); border-bottom:1px solid var(--latte);
+          padding:20px 6%; display:flex; flex-direction:column; gap:0;
+          z-index:99; box-shadow:0 8px 32px rgba(61,43,31,.08);
+        `;
+        const links = [
+          ['#about','Our Story'],['#products','Menu'],
+          ['#ingredients','Ingredients'],['https://www.instagram.com/pawpa_pastry','Instagram'],
+          ['#order','Order Now']
+        ];
+        links.forEach(([href, label]) => {
+          const a = document.createElement('a');
+          a.href = href; a.textContent = label;
+          a.style.cssText = 'padding:14px 0; border-bottom:1px solid var(--warm); font-size:.95rem; font-weight:500;';
+          a.addEventListener('click', () => { menu.remove(); });
+          menu.appendChild(a);
+        });
+        nav.after(menu);
+      } else {
+        menu.remove();
+      }
+    }
+
+    // ── REVIEWS CAROUSEL ──
+    (function() {
+      const track = document.getElementById('reviewsTrack');
+      const dots = document.querySelectorAll('.rdot');
+      const slides = document.querySelectorAll('.review-slide');
+      if (!track || !slides.length) return;
+
+      let current = 0;
+      let autoTimer;
+      let isDragging = false;
+      let startX = 0;
+      let startTranslate = 0;
+
+      function getSlideWidth() {
+        return slides[0].offsetWidth + 20;
+      }
+      function getOffset() {
+        const outerW = track.parentElement.offsetWidth;
+        const slideW = getSlideWidth();
+        return (outerW / 2) - (slideW / 2) - (slideW * current);
+      }
+      function goReview(idx) {
+        current = Math.max(0, Math.min(idx, slides.length - 1));
+        track.style.transform = `translateX(${getOffset()}px)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      }
+      window.goReview = goReview;
+
+      function startAuto() {
+        autoTimer = setInterval(() => goReview((current + 1) % slides.length), 3500);
+      }
+      function stopAuto() { clearInterval(autoTimer); }
+
+      function onDragStart(e) {
+        isDragging = true;
+        startX = e.touches ? e.touches[0].clientX : e.clientX;
+        const matrix = new DOMMatrix(getComputedStyle(track).transform);
+        startTranslate = matrix.m41;
+        track.style.transition = 'none';
+        stopAuto();
+      }
+      function onDragMove(e) {
+        if (!isDragging) return;
+        const x = e.touches ? e.touches[0].clientX : e.clientX;
+        track.style.transform = `translateX(${startTranslate + (x - startX)}px)`;
+      }
+      function onDragEnd(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.transition = '';
+        const x = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+        const diff = x - startX;
+        if (Math.abs(diff) > 50) {
+          goReview(diff < 0 ? current + 1 : current - 1);
+        } else {
+          goReview(current);
+        }
+        startAuto();
+      }
+
+      track.addEventListener('mousedown', onDragStart);
+      track.addEventListener('mousemove', onDragMove);
+      track.addEventListener('mouseup', onDragEnd);
+      track.addEventListener('mouseleave', onDragEnd);
+      track.addEventListener('touchstart', onDragStart, { passive: true });
+      track.addEventListener('touchmove', onDragMove, { passive: true });
+      track.addEventListener('touchend', onDragEnd);
+
+      goReview(0);
+      startAuto();
+      window.addEventListener('resize', () => goReview(current));
+    })();
+  </script>
+
+</body>
+</html>

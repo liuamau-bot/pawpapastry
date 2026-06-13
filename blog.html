@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | PawPa Pastry — Pet Care Tips & Stories</title>
+  <meta name="description" content="Tips, stories and guides for pet parents in Singapore. Learn about safe ingredients for dog treats, how to celebrate your pet's birthday, and more from PawPa Pastry." />
+  <link rel="canonical" href="https://www.pawpapastry.com/blog.html" />
+  <meta property="og:title" content="Blog | PawPa Pastry" />
+  <meta property="og:description" content="Tips and stories for pet parents — from safe treat ingredients to birthday celebration ideas." />
+  <meta property="og:image" content="https://www.pawpapastry.com/assets/images/logo/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FAF7F2; --warm: #EDE8DF; --latte: #D4C8B8;
+      --espresso: #3D2B1F; --caramel: #C8956C; --sage: #8FAF7E;
+      --white: #FFFFFF; --radius: 16px; --radius-sm: 8px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--espresso); font-family: 'DM Sans', sans-serif; line-height: 1.6; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,247,242,0.92); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--latte);
+      padding: 0 5%; height: 76px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
+    .nav-logo img { width: 64px; height: 64px; object-fit: contain; border-radius: 50%; }
+    .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 700; color: var(--espresso); }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; opacity: 0.75; transition: opacity 0.2s; letter-spacing: 0.04em; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-cta { background: var(--espresso) !important; color: var(--cream) !important; opacity: 1 !important; padding: 9px 20px; border-radius: 50px; }
+    .nav-cta:hover { background: var(--caramel) !important; }
+
+    .blog-hero { padding: 72px 8% 56px; text-align: center; background: var(--warm); border-bottom: 1px solid var(--latte); }
+    .blog-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--caramel); margin-bottom: 16px; }
+    .blog-eyebrow::before { content: ''; display: inline-block; width: 20px; height: 2px; background: var(--caramel); border-radius: 2px; }
+    .blog-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 14px; }
+    .blog-sub { font-size: 1rem; opacity: 0.65; max-width: 480px; margin: 0 auto; line-height: 1.75; }
+
+    .blog-grid-wrap { padding: 64px 8%; }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; }
+
+    .blog-card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--latte); overflow: hidden; transition: box-shadow 0.3s, transform 0.3s; }
+    .blog-card:hover { box-shadow: 0 16px 40px rgba(61,43,31,0.10); transform: translateY(-3px); }
+    .blog-card-img { height: 200px; overflow: hidden; background: var(--warm); }
+    .blog-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .blog-card:hover .blog-card-img img { transform: scale(1.05); }
+    .blog-card-body { padding: 24px 24px 28px; }
+    .blog-card-tag { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--caramel); margin-bottom: 10px; }
+    .blog-card-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; line-height: 1.35; margin-bottom: 10px; }
+    .blog-card-excerpt { font-size: 0.875rem; opacity: 0.65; line-height: 1.7; margin-bottom: 20px; }
+    .blog-card-meta { display: flex; align-items: center; justify-content: space-between; font-size: 0.78rem; opacity: 0.5; }
+    .read-more { display: inline-flex; align-items: center; gap: 6px; font-size: 0.85rem; font-weight: 600; color: var(--caramel); }
+    .read-more::after { content: '→'; transition: transform 0.2s; }
+    .blog-card:hover .read-more::after { transform: translateX(4px); }
+
+    footer { background: #2A1E17; color: var(--cream); padding: 48px 8% 32px; display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
+    .footer-brand img { width: 52px; margin-bottom: 14px; border-radius: 50%; }
+    .footer-brand p { font-size: 0.85rem; opacity: 0.55; line-height: 1.7; max-width: 260px; }
+    .footer-col h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; margin-bottom: 16px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a { font-size: 0.85rem; opacity: 0.55; transition: opacity 0.2s; }
+    .footer-col a:hover { opacity: 1; }
+    .footer-bottom { background: #2A1E17; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; padding: 20px 8%; font-size: 0.78rem; opacity: 0.4; }
+
+    @media (max-width: 900px) {
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      footer { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 580px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      footer { grid-template-columns: 1fr; }
+      .blog-grid-wrap { padding: 48px 5%; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo/logo.png" alt="PawPa Pastry" />
+      <span class="nav-logo-text">PawPa Pastry</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">Our Story</a></li>
+      <li><a href="index.html#products">Menu</a></li>
+      <li><a href="blog.html" style="opacity:1;color:var(--caramel)">Blog</a></li>
+      <li><a href="https://www.instagram.com/pawpa_pastry" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="index.html#order" class="nav-cta">Order Now</a></li>
+    </ul>
+  </nav>
+
+  <div class="blog-hero">
+    <div class="blog-eyebrow">Paw-some Reads</div>
+    <h1 class="blog-title">Tips & Stories for Pet Parents</h1>
+    <p class="blog-sub">From safe treat ingredients to birthday celebration ideas — everything you need to spoil your fur baby right.</p>
+  </div>
+
+  <div class="blog-grid-wrap">
+    <div class="blog-grid">
+
+      <a href="blog/safe-ingredients-dog-birthday-cakes.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="assets/images/blog/ingredients-hero.jpg" alt="Safe ingredients for dog birthday cakes" loading="lazy" />
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">🌿 Ingredients</span>
+          <h2 class="blog-card-title">What Ingredients Are Safe for Dog Birthday Cakes?</h2>
+          <p class="blog-card-excerpt">Not all human cake ingredients are safe for dogs. Here's your complete guide to what's paw-approved — and what to avoid at all costs.</p>
+          <div class="blog-card-meta">
+            <span>December 2025 · 5 min read</span>
+            <span class="read-more">Read more</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog/behind-the-scenes-how-we-make-our-cupcakes.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="assets/images/products/christmas-cupcakes/2.jpg" alt="Behind the scenes at PawPa Pastry" loading="lazy" />
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">🐾 Our Story</span>
+          <h2 class="blog-card-title">Behind the Scenes — How We Make Our Cupcakes</h2>
+          <p class="blog-card-excerpt">Every PawPa Pastry cupcake starts with a simple belief: your pet deserves real food made with love. Here's what actually goes into each order.</p>
+          <div class="blog-card-meta">
+            <span>December 2025 · 4 min read</span>
+            <span class="read-more">Read more</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog/how-to-celebrate-dog-birthday-singapore.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="assets/images/blog/birthday-celebrate-hero.jpg" alt="How to celebrate your dog's birthday in Singapore" loading="lazy" />
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">🎂 Celebration</span>
+          <h2 class="blog-card-title">How to Celebrate Your Dog's Birthday in Singapore</h2>
+          <p class="blog-card-excerpt">Your dog's birthday only comes once a year — make it count. From dog-friendly venues to the perfect pup cake, here's how to plan the ultimate celebration.</p>
+          <div class="blog-card-meta">
+            <span>December 2025 · 6 min read</span>
+            <span class="read-more">Read more</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="blog/feeding-guidelines-pet-treat-safety.html" class="blog-card">
+        <div class="blog-card-img">
+          <img src="assets/images/blog/feeding-hero.jpg" alt="Feeding guidelines for pet treats" loading="lazy" />
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-card-tag">🛡️ Health &amp; Safety</span>
+          <h2 class="blog-card-title">Feeding Guidelines — How to Give Your Pet a Treat Safely</h2>
+          <p class="blog-card-excerpt">Portions, allergy disclosure, storage tips, and when to check with your vet first — everything you need before your pet's first bite.</p>
+          <div class="blog-card-meta">
+            <span>December 2025 · 4 min read</span>
+            <span class="read-more">Read more</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="assets/images/logo/logo.png" alt="PawPa Pastry" />
+      <p>All-natural, additive-free handmade treats &amp; cakes for pets. Because your furry kids deserve only the best.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="index.html#products">Birthday Cupcakes</a></li>
+        <li><a href="index.html#products">Christmas Cupcakes</a></li>
+        <li><a href="index.html#products">Chicken Cookies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/pawpa_pastry" target="_blank" rel="noopener">Instagram @pawpa_pastry</a></li>
+        <li><a href="https://wa.me/6584232193" target="_blank" rel="noopener">WhatsApp Us</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+  </footer>
+  <div class="footer-bottom">© 2025 PawPa Pastry · Handmade in Singapore 🐾</div>
+
+</body>
+</html>
